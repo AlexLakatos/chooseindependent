@@ -85,7 +85,7 @@ select, option {
   content: "";
 }
 #top-static-fix{
-  padding: 96px 0;
+  padding: 96px 0 65px 0;
   position:relative;
   z-index: 100;
 }
@@ -126,11 +126,11 @@ select, option {
 }
 .way-to-involve p{
   font-size:3em; 
-  margin-top:60px;
   font-weight:300;
 }
 .involve-btn{
   margin-top:10px;
+  margin-bottom:100px;
 }
 .involve-btn>div>div{
   height:60px;
@@ -223,11 +223,8 @@ footer ul a{
   top: -60px;
 }
 .image-responsive{
-  min-width:320px;
-  max-width:320px;
+  max-width:400px;
   margin:auto;
-  min-height:240px;
-  height:100%;
   display:block;
 
 }

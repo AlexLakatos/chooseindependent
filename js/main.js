@@ -28,6 +28,11 @@
         	        enabled: false
         	    }
         	}
-        });
+        }),
+        language = document.webL10n.getLanguage().replace(/-[a-z0-9]+$/i, ''),
+        option = document.querySelector('option[value="'+language+'"]');
+        if (option) {
+            document.querySelector('#language').value = option.value;
+        }
       }, false);
 }());

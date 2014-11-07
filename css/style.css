@@ -37,7 +37,6 @@ body {
   overflow-x: hidden;
   width: 100%;
   margin: 0;
-  border-top: 2px solid #fff;
 }
 a{
   color:#fff;
@@ -46,6 +45,7 @@ select, option {
   color: #000;
 }
 #bgfx{
+  border-top: 2px solid #fff;
   background: #013356 url('../images/full-bg-wo-globe.png') no-repeat scroll center 390px;
 }
 #take-a-photo a {

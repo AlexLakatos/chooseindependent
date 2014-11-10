@@ -344,6 +344,11 @@ font-family: "FontAwesome" !important;
 #tabzilla-panel{
   z-index:200 !important;
 }
+#embedcode {
+  color: #000;
+  font-size: 0.7rem;
+  width: 100%;
+}
 @media (min-width: 40em) and (max-width: 1024px) {
   .landing-section {
     padding-bottom: 420px;

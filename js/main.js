@@ -8,9 +8,9 @@
             pt: 'https://www.youtube.com/watch?v=q7d7m_4X8tg'
         },
         topVideoUrlConfigEmbed = {
-            en: 'https://www.youtube.com/embed/LtOGa5M8AuU?enablejsapi=1&controls=0&showinfo=0"',
-            de: 'https://www.youtube.com/embed/q8r3HyMnZrQ?enablejsapi=1&controls=0&showinfo=0"',
-            pt: 'https://www.youtube.com/embed/q7d7m_4X8tg?enablejsapi=1&controls=0&showinfo=0"'
+            en: 'https://www.youtube.com/embed/LtOGa5M8AuU?enablejsapi=1&controls=0&showinfo=0',
+            de: 'https://www.youtube.com/embed/q8r3HyMnZrQ?enablejsapi=1&controls=0&showinfo=0',
+            pt: 'https://www.youtube.com/embed/q7d7m_4X8tg?enablejsapi=1&controls=0&showinfo=0'
         },
         topVideoUrl = topVideoUrlConfig.en,
         topVideoUrlSrc = topVideoUrlConfigEmbed.en,

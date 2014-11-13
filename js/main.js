@@ -2,16 +2,15 @@
     var embedcodeElem = document.getElementById('embedcode');
 
     document.webL10n.ready(function() {
-        // TODO: change URLs to real videos
         var topVideoUrlConfig = {
             en: 'https://www.youtube.com/watch?v=LtOGa5M8AuU',
-            de: 'https://www.youtube.com/watch?v=q8r3HyMnZrQ ',
+            de: 'https://www.youtube.com/watch?v=q8r3HyMnZrQ',
             pt: 'https://www.youtube.com/watch?v=q7d7m_4X8tg'
         },
         topVideoUrlConfigEmbed = {
-            en: 'https://www.youtube.com/embed/LtOGa5M8AuU?controls=0&showinfo=0',
-            de: 'https://www.youtube.com/embed/q8r3HyMnZrQ?controls=0&showinfo=0',
-            pt: 'https://www.youtube.com/embed/q7d7m_4X8tg?controls=0&showinfo=0'
+            en: 'https://www.youtube.com/embed/LtOGa5M8AuU?enablejsapi=1&controls=0&showinfo=0"',
+            de: 'https://www.youtube.com/embed/q8r3HyMnZrQ?enablejsapi=1&controls=0&showinfo=0"',
+            pt: 'https://www.youtube.com/embed/q7d7m_4X8tg?enablejsapi=1&controls=0&showinfo=0"'
         },
         topVideoUrl = topVideoUrlConfig.en,
         topVideoUrlSrc = topVideoUrlConfigEmbed.en,
@@ -151,4 +150,45 @@
         ga('send', 'event', 'li', 'click', 'tenyears-video-email');
       }
     });
+	
+	
+	var s = document.createElement("script");
+	s.src = "https://www.youtube.com/player_api"; /* Load Player API*/
+	var before = document.getElementsByTagName("script")[0];
+	before.parentNode.insertBefore(s, before);
+	
 }());
+
+
+
+function topVideoGA(event) {
+    if (event.data == YT.PlayerState.PLAYING) {
+		ga('send', 'event', 'ChooseIndependentVideo', 'clicked');
+    }
+	if (event.data == YT.PlayerState.ENDED) {
+		ga('send', 'event', 'ChooseIndependentVideo', 'watched');
+	}
+}
+function bottomVideoGA(event) {
+    if (event.data == YT.PlayerState.PLAYING) {
+		ga('send', 'event', 'FX10Video', 'clicked');
+    }
+	if (event.data == YT.PlayerState.ENDED) {
+		ga('send', 'event', 'FX10Video', 'watched');
+	}
+}
+
+var player1, player2;
+function onYouTubeIframeAPIReady(event) {
+        player1 = new YT.Player('topvideo', {
+          events: {
+            'onStateChange': topVideoGA
+          }
+        });   
+		
+        player2 = new YT.Player('bottomvideo', {
+          events: {
+            'onStateChange': bottomVideoGA
+          }
+        });		
+}

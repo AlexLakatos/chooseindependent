@@ -284,6 +284,9 @@ footer ul a{
   height: 50px !important;
   line-height: 47px;
 }
+.share-btn.sharer-0 label span,.share-btn.sharer-1 label span{
+  font-family:'Open Sans' !important;
+}
 .entypo-export:before {
 content: "\f1e0" !important;
 font-family: "FontAwesome" !important;
@@ -303,33 +306,7 @@ font-family: "FontAwesome" !important;
   ul li a i{
     padding-left:5px;
   }
-/*
-[class^=".share-btn.sharer"]{
-  width: 250px !important;
-  height: 50px  !important;
-}
-[class^=".share-btn.sharer-"] .social.networks-5{
-  width: 460px !important;
-}
-.share-btn.sharer-0 label,.share-btn.sharer-1 label{
-  padding: 0 !important;
-  border: 1px solid #FFFFFF;
-  background-color:#0D99D6 !important;
-  color:#fff !important;
-  display: block;
-  width: 250px !important;
-  height: 50px !important;
-  line-height: 50px;
-}
-.share-btn-div .share-btn{
-  padding:10px 50px;
-  background-color:#497BE4 !important;
-  border-radius:6px;
 
-}
-.share-btn-div .share-btn:hover{
-  color:#fff;
-}*/
 .share-btn{
   margin:auto;
 }
@@ -340,7 +317,6 @@ font-family: "FontAwesome" !important;
 .show-for-small-only{
   display:none;
 }
-/*background: url('../img/home-bg2.jpg') repeat scroll center center / cover transparent;*/
 #tabzilla-panel{
   z-index:200 !important;
 }
@@ -369,9 +345,6 @@ font-family: "FontAwesome" !important;
 @media(max-width: 40em){
   #bgfx {
     background-image: none;
-  }
-  .sub-sub-list{
-    margin-top:20px;
   }
   #heading{
     font-size:2.5em;
